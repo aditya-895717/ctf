@@ -8,12 +8,12 @@ authRoutes.post("/login", login);
 authRoutes.post("/signup", signup);
 
 // //testing protected routes for single middleware
-// router.get("/test", auth, (req,res) =>{
-//     res.json({
-//         success:true,
-//         message:'Welcome to the Protected route for TESTS',
-//     });
-// });
+authRoutes.get("/test", (req,res) =>{
+     res.json({
+         success:true,
+         message:'Welcome to the Protected route for TESTS',
+     });
+ });
 
 // //Protected Route
 // router.get("/student", auth, isStudent, (req,res) => {
